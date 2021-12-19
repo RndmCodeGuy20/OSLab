@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 {
     printf("Process ID of program is : %d\n", getpid());
 
-    char *args[] = {NULL};
+    char *args[1] = {};
 
     execv("./prog2.out", args);
 
