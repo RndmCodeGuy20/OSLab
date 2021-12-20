@@ -15,9 +15,12 @@ int main()
     printf("Enter data you want to write in the file : ");
     n = scanf("%c", writeBuff);
     fd = open("WriteFile.txt", O_WRONLY);
-    
-    
+    printf("%d\n", fd);
     write(fd, writeBuff, n);
+    // while (fd = open("WriteFile.txt", O_WRONLY) > 0)
+    // {
+    //     write(fd, writeBuff, n);
+    // }
 
     //- Printing string without printf.
     fd = write(1, "Printing string without printf\n", 30);
