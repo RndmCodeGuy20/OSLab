@@ -8,7 +8,7 @@ int main(int argc, char const *argv[])
 {
     int a = 20, b = 30;
     int c = a + b;
-    printf("We are currently in program 🥈 ID : %d\nSum of %d and %d = %d\n", getpid(), a, b, c);
+    printf("We are currently in program 🥈 with ProcessID : %d\nSum of %d and %d = %d\n", getpid(), a, b, c);
     printf("Program 2 execution done!!! Ending Execution!!!\n");
 
     return 0;
