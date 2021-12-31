@@ -6,13 +6,13 @@
 
 int main(int argc, char *argv[])
 {
-    printf("Process ID of program is : %d\n", getpid());
+    printf("We are currently in Program 🥇 with ProcessID : %d\n", getpid());
 
     char *args[1] = {};
 
     execv("./prog2.out", args);
 
-    printf("Back to program 1!\n");
+    printf("☢️☢️☢️If you're seeing this line, you encountered an error somewhere!!!☢️☢️☢️\n");
 
     return 0;
 }
