@@ -6,9 +6,14 @@
 
 int main(int argc, char *argv[])
 {
+    int inp1,inp2;
+
     printf("We are currently in Program 🥇 with ProcessID : %d\n", getpid());
 
-    char *args[1] = {};
+    printf("Enter the numbers : ");
+    scanf("%d %d",&inp1,&inp2);
+
+    char *args[] = {inp1,inp2,NULL};
 
     execv("./prog2.out", args);
 
