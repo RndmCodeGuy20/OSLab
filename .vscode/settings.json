@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "*.vhd": "vhdl",
-        "fcntl.h": "c"
+        "fcntl.h": "c",
+        "threads.h": "c",
+        "types.h": "c"
     }
 }
