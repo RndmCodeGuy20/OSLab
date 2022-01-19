@@ -3,6 +3,8 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <pthread.h>
+#include <stdlib.h>
 
 int main()
 {
@@ -22,5 +24,6 @@ int main()
     {
         printf("Ha vau\n");
     }
+
     return 0;
 }
