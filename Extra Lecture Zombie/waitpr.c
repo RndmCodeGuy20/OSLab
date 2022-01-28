@@ -20,6 +20,6 @@ int main()
 
     printf("Child ID : %d\n", childPID);
     printf("Parent ID : %d\n", getpid());
-    
+
     return 0;
 }
