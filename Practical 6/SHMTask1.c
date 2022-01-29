@@ -11,12 +11,11 @@
 
 int main()
 {
-    int k;
     int *sharedMem;
     int buffArr[20];
     int shmID;
 
-    shmID = shmget((key_t)7262, 1024, 0666 | IPC_CREAT);
+    shmID = shmget((key_t)2345, 1024, 0666 | IPC_CREAT);
     printf("Unique key of segment : %d\n", shmID);
 
     sharedMem = shmat(shmID, NULL, 0);
