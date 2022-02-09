@@ -10,7 +10,7 @@
 int shared = 1;
 sem_t s;
 
-void *methA()
+void *producer()
 {
     int x1;
     sem_wait(&s);
@@ -30,7 +30,7 @@ void *methA()
     sem_post(&s);
 }
 
-void *methB()
+void *consumer()
 {
     int x2;
     sem_wait(&s);
@@ -55,8 +55,8 @@ int main()
     sem_init(&s, 0, 1);
 
     pthread_t pThread1, cThread2;
-    pthread_create(&pThread1, NULL, methA, NULL);
-    pthread_create(&cThread2, NULL, methB, NULL);
+    pthread_create(&pThread1, NULL, producer, NULL);
+    pthread_create(&cThread2, NULL, consumer, NULL);
 
     pthread_join(pThread1, NULL);
     pthread_join(cThread2, NULL);
