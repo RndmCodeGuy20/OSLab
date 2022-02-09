@@ -58,6 +58,7 @@ int main()
     sem_init(&s, 0, 1);
 
     pthread_t pThread1, cThread2;
+    
     pthread_create(&pThread1, NULL, producer, NULL);
     pthread_create(&cThread2, NULL, consumer, NULL);
 
