@@ -3,7 +3,9 @@
         "*.vhd": "vhdl",
         "fcntl.h": "c",
         "threads.h": "c",
-        "types.h": "c"
+        "types.h": "c",
+        "*.tcc": "c",
+        "istream": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
