@@ -7,50 +7,28 @@
 #include <pthread.h>
 #include <stdlib.h>
 
-int reqSeq[50];
-int SIZE;
-
-int dist(int a, int b)
-{
-    if (a > b)
-        return a - b;
-    return b - a;
-}
-
-void fcfs(int n)
-{
-    int head, i;
-    int seekCnt = 0;
-
-    printf("Enter the current head :\n");
-    scanf("%d", &head);
-
-    for (i = 0; i < n; i++)
-    {
-        if (reqSeq[i] < SIZE - 1)
-        {
-            seekCnt = seekCnt + dist(head, reqSeq[i]);
-            head = reqSeq[i];
-        }
-    }
-
-    printf("Total Distance : %d", seekCnt);
-}
-
 int main()
 {
-    int n, i;
-    printf("Enter the Disk Size :\n");
-    scanf("%d", &SIZE);
+    int RQ[100], i, n, TotalHeadMoment = 0, initial;
 
-    printf("Enter the number of request in the list :\n");
+    printf("Enter the number of Requests : ");
     scanf("%d", &n);
 
-    printf("Enter request sequence :\n");
+    printf("Enter the Requests sequence : ");
     for (i = 0; i < n; i++)
     {
-        scanf("%d", &reqSeq[i]);
+        scanf("%d", &RQ[i]);
     }
 
-    fcfs(n);
+    printf("Enter initial head position : ");
+    scanf("%d", &initial);
+
+    for (i = 0; i < n; i++)
+    {
+        TotalHeadMoment = TotalHeadMoment + abs(RQ[i] - initial);
+        initial = RQ[i];
+    }
+
+    printf("Total head moment is %d", TotalHeadMoment);
+    return 0;
 }
